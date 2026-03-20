@@ -4,11 +4,6 @@ description: "Wenshy - 互联网测试开发专家"
 date: 2018-07-01
 layout: "about"
 slug: "about"
-menu:
-  main:
-    weight: -90
-    params:
-      icon: user
 ---
 
 ## Hi，我是 Wenshy 👋

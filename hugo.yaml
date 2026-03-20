@@ -30,7 +30,7 @@ params:
   sidebar:
     compact: false
     emoji: 🌙
-    subtitle: "读书笔记 · 随笔创作  · 技术分享 · 生活碎片"
+    subtitle: " 技术分享 · 读书笔记 · 原创随笔"
     avatar: img/avatar.png
 
   article:
@@ -61,42 +61,24 @@ params:
 
 menu:
   main:
-    - identifier: home
-      name: 首页
-      url: /
+    - identifier: about
+      name: 关于我
+      url: /about/
       weight: 1
       params:
-        icon: home
-    - identifier: archives
-      name: 归档
-      url: /archives/
+        icon: user
+    - identifier: tech
+      name: 技术分享
+      url: /categories/技术/
       weight: 2
       params:
-        icon: archives
-    - identifier: search
-      name: 搜索
-      url: /search/
+        icon: hash
+    - identifier: poetry
+      name: 于是我开始写诗
+      url: /categories/诗歌/
       weight: 3
       params:
-        icon: search
-    - identifier: about
-      name: 关于
-      url: /about/
-      weight: 4
-      params:
-        icon: user
-    - identifier: works
-      name: 作品
-      url: /works/
-      weight: 5
-      params:
-        icon: hash
-    - identifier: links
-      name: 平台
-      url: /links/
-      weight: 6
-      params:
-        icon: link
+        icon: infinity
 
   social:
     - identifier: github
@@ -104,11 +86,11 @@ menu:
       url: https://github.com/wenxiaoshi
       params:
         icon: brand-github
-    - identifier: rss
-      name: RSS
-      url: /index.xml
-      params:
-        icon: rss
+    # - identifier: rss
+    #   name: RSS
+    #   url: /index.xml
+    #   params:
+    #     icon: rss
 
 related:
   includeNewer: true

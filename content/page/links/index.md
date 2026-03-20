@@ -4,11 +4,6 @@ description: "Wenshy 在各平台的数字足迹"
 date: 2026-01-01
 layout: "links"
 slug: "links"
-menu:
-  main:
-    weight: -70
-    params:
-      icon: link
 ---
 
 ## 我的数字足迹

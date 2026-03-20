@@ -4,11 +4,6 @@ description: "Wenshy 的完整作品索引"
 date: 2026-01-01
 layout: "works"
 slug: "works"
-menu:
-  main:
-    weight: -80
-    params:
-      icon: hash
 ---
 
 ## 作品系列
