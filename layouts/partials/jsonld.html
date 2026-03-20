@@ -1,0 +1,43 @@
+{{- if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Wenshy",
+  "url": "{{ .Site.BaseURL }}",
+  "description": "读书人、诗人、测试工程师、世界观察者。6年阅读300+本书，29首+原创诗歌，旅居马来西亚吉隆坡。",
+  "jobTitle": "QA Engineer",
+  "knowsAbout": ["书评", "诗歌", "香水评测", "软件测试", "QA", "AI"],
+  "sameAs": [
+    "https://github.com/wenshy"
+  ]
+}
+</script>
+{{- else if .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ .Title }}",
+  "description": "{{ .Description }}",
+  "author": {
+    "@type": "Person",
+    "name": "Wenshy",
+    "url": "{{ .Site.BaseURL }}"
+  },
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Wenshy"
+  }
+  {{- with .Params.keywords }},
+  "keywords": [{{ range $i, $k := . }}{{ if $i }}, {{ end }}"{{ $k }}"{{ end }}]
+  {{- end }}
+}
+</script>
+{{- end }}

@@ -1,0 +1,6 @@
+{{ partial "jsonld.html" . }}
+
+<!-- 额外的 SEO meta 标签 -->
+{{- with .Params.keywords }}
+<meta name="keywords" content="{{ delimit . ", " }}">
+{{- end }}

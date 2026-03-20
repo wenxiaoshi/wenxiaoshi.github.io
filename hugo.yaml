@@ -1,0 +1,143 @@
+baseURL: "https://wenxiaoshi.github.io/"
+languageCode: zh-cn
+title: "Wenshy 的数字花园"
+theme: hugo-theme-stack
+
+defaultContentLanguage: zh-cn
+
+pagination:
+  pagerSize: 10
+
+languages:
+  zh-cn:
+    languageName: 中文
+    weight: 1
+
+params:
+  mainSections:
+    - post
+  featuredImageField: image
+  rssFullContent: true
+  favicon: 
+
+  footer:
+    since: 2026
+
+  dateFormat:
+    published: 2006-01-02
+    lastUpdated: 2006-01-02 15:04 MST
+
+  sidebar:
+    compact: false
+    emoji: 🌙
+    subtitle: "书评 · 诗歌 · 香水诗评 · 技术 · 生活"
+
+  article:
+    math: false
+    toc: true
+    readingTime: true
+    license:
+      enabled: false
+
+  widgets:
+    homepage:
+      - type: search
+      - type: archives
+        params:
+          limit: 5
+    page:
+      - type: toc
+
+  colorScheme:
+    toggle: true
+    default: auto
+
+  imageProcessing:
+    cover:
+      enabled: true
+    content:
+      enabled: true
+
+menu:
+  main:
+    - identifier: home
+      name: 首页
+      url: /
+      weight: 1
+      params:
+        icon: home
+    - identifier: archives
+      name: 归档
+      url: /archives/
+      weight: 2
+      params:
+        icon: archives
+    - identifier: search
+      name: 搜索
+      url: /search/
+      weight: 3
+      params:
+        icon: search
+    - identifier: about
+      name: 关于
+      url: /about/
+      weight: 4
+      params:
+        icon: user
+    - identifier: works
+      name: 作品
+      url: /works/
+      weight: 5
+      params:
+        icon: hash
+    - identifier: links
+      name: 平台
+      url: /links/
+      weight: 6
+      params:
+        icon: link
+
+  social:
+    - identifier: github
+      name: GitHub
+      url: https://github.com/wenxiaoshi
+      params:
+        icon: brand-github
+    - identifier: rss
+      name: RSS
+      url: /index.xml
+      params:
+        icon: rss
+
+related:
+  includeNewer: true
+  threshold: 60
+  toLower: false
+  indices:
+    - name: tags
+      weight: 100
+    - name: categories
+      weight: 200
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  tableOfContents:
+    endLevel: 4
+    ordered: true
+    startLevel: 2
+  highlight:
+    noClasses: false
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+enableRobotsTXT: true
+
+taxonomies:
+  category: categories
+  tag: tags
