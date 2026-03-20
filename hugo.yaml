@@ -1,6 +1,6 @@
 baseURL: "https://wenxiaoshi.github.io/"
 languageCode: zh-cn
-title: "Wenshy 的数字花园"
+title: "Wenshy"
 theme: hugo-theme-stack
 
 defaultContentLanguage: zh-cn
@@ -30,7 +30,8 @@ params:
   sidebar:
     compact: false
     emoji: 🌙
-    subtitle: "书评 · 诗歌 · 香水诗评 · 技术 · 生活"
+    subtitle: "读书笔记 · 随笔创作  · 技术分享 · 生活碎片"
+    avatar: img/avatar.png
 
   article:
     math: false
