@@ -30,7 +30,7 @@ params:
   sidebar:
     compact: false
     emoji: 🌙
-    subtitle: " 技术分享 · 读书笔记 · 原创随笔"
+    subtitle: "技术分享 · 读书笔记"
     avatar: img/avatar.png
 
   article:
@@ -73,12 +73,6 @@ menu:
       weight: 2
       params:
         icon: hash
-    - identifier: poetry
-      name: 于是我开始写诗
-      url: /categories/诗歌/
-      weight: 3
-      params:
-        icon: infinity
 
   social:
     - identifier: github
