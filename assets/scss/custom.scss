@@ -1,0 +1,98 @@
+// === 引入主题断点定义 ===
+@import "breakpoints.scss";
+
+// === 两栏布局（左侧栏 + 文章区）===
+// 移除右侧栏，保持极简阅读体验
+
+// 隐藏右侧栏
+.right-sidebar {
+    display: none !important;
+}
+
+.container {
+    &.extended {
+        @include respond(md) {
+            max-width: 1024px;
+            --left-sidebar-max-width: 20%;
+            --right-sidebar-max-width: 0;
+        }
+
+        @include respond(lg) {
+            max-width: 1280px;
+            --left-sidebar-max-width: 20%;
+            --right-sidebar-max-width: 0;
+        }
+
+        @include respond(xl) {
+            max-width: 1400px;
+            --left-sidebar-max-width: 20%;
+            --right-sidebar-max-width: 0;
+        }
+    }
+    
+    &.compact {
+        @include respond(md) {
+            --left-sidebar-max-width: 20%;
+            --right-sidebar-max-width: 0;
+        }
+
+        @include respond(lg) {
+            --left-sidebar-max-width: 20%;
+            --right-sidebar-max-width: 0;
+        }
+    }
+}
+
+// === 文章阅读区优化 ===
+// 参考 overreacted.io 的极简阅读体验
+.article-content {
+    font-size: 1.6rem;
+    line-height: 1.85;
+}
+
+// 段落间距优化
+.article-content p {
+    margin-bottom: 1.5em;
+}
+
+// === 暗黑模式代码块优化 ===
+[data-scheme="dark"] {
+    --code-background-color: #1e1e1e;
+    --code-text-color: #e8e8e8;
+}
+
+// === 语言切换组件 ===
+.language-switcher {
+    margin-top: 20px;
+    
+    .language-buttons {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+    }
+    
+    .lang-btn {
+        flex: 1;
+        padding: 6px 12px;
+        text-align: center;
+        border: 1px solid var(--card-separator-color, #e0e0e0);
+        border-radius: var(--card-border-radius, 10px);
+        background: var(--card-background, #fff);
+        color: var(--body-text-color, #333);
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        
+        &:hover {
+            border-color: var(--accent-color);
+            background: var(--card-background-selected, #f5f5f5);
+        }
+        
+        &.active {
+            background: var(--accent-color);
+            color: var(--accent-color-text, #fff);
+            border-color: var(--accent-color);
+            font-weight: 600;
+        }
+    }
+}
